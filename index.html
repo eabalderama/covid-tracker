@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Covid-19 Tracker</title>
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="./style.css" />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Font Awesome CDN -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Coronavirus Disease (COVID-19) Updates</h1>
+		</div>
+		<div class="world-data">
+			<div class="world-data-title">
+				<h1>Global Situation</h1>
+			</div>
+			<div class="world-data-top">
+				<div class="global-case">
+					<p>Confirmed Cases: <strong class="number-cases"></strong></p>
+				</div>
+			</div>
+			<div class="world-data-bottom">
+				<div class="deaths">
+					<p>Deaths: <strong class="number-deaths"></strong></p>
+				</div>
+				<div class="active">
+					<p>Active: <strong class="number-active"></strong></p>
+				</div>
+				<div class="recovered">
+					<p>Recovered: <strong class="number-recovered"></strong></p>
+				</div>
+			</div>
+		</div>
+		<div class="chart">
+			<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+		</div>
+		<div class="search-country">
+			<h2>Check for your country's updates</h2>
+			<div class="search">
+				<input
+					type="text"
+					class="searchbox"
+					placeholder="Enter your country name"
+				/>
+				<button type="submit" class="searchbtn">
+					<i class="fa fa-search"></i>
+				</button>
+			</div>
+		</div>
+		<div class="country-everything hidden">
+			<div class="country-title">
+				<h1 class="country-name"></h1>
+				<img class="country-flag" src="" alt="Country flag" />
+			</div>
+
+			<div class="country-data">
+				<div>
+					<p>Deaths: <strong class="country-deaths"></strong></p>
+				</div>
+				<div>
+					<p>Cases: <strong class="country-cases"></strong></p>
+				</div>
+				<div>
+					<p>Recovered: <strong class="country-recovered"></strong></p>
+				</div>
+			</div>
+			<div class="chart">
+				<div class="chart-country"></div>
+			</div>
+			<div class="today">
+				<h1>Today's Updates</h1>
+				<div class="today-info">
+					<div>
+						<p>Deaths:</p>
+						<p><strong class="new-deaths"></strong></p>
+					</div>
+					<div>
+						<p>Cases:</p>
+						<p><strong class="new-cases"></strong></p>
+					</div>
+					<div>
+						<p>Recovered:</p>
+						<p><strong class="new-recovered"></strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="details">
+				<div class="details-one">
+					<h1>API USED</h1>
+					<p><a href="https://disease.sh" target="_blank">disease.sh</a></p>
+				</div>
+				<div class="details-two">
+					<h1>DATA SOURCES</h1>
+					<div class="details-two-content">
+						<div class="sources-1">
+							<h3>Used in this tracker</h3>
+							<p>
+								<a
+									href="https://github.com/CSSEGISandData/COVID-19"
+									target="_blank"
+									>John Hopkins University</a
+								>
+							</p>
+							<p>
+								<a
+									href="https://www.worldometers.info/coronavirus/"
+									target="_blank"
+									>Worldometers</a
+								>
+							</p>
+						</div>
+						<div class="sources-2">
+							<h3>Other data sources</h3>
+							<p>
+								<a
+									href="https://github.com/nytimes/covid-19-data"
+									target="_blank"
+									>New York Times</a
+								>
+							</p>
+
+							<p>
+								<a
+									href="https://github.com/ActiveConclusion/COVID19_mobility"
+									target="_blank"
+									>Apple Reports</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<!-- Apex Charts CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+	<!-- Index JS -->
+	<script src="./index.js"></script>
+</html>
